@@ -3,3 +3,9 @@
 
 #mkdir ./data
 #chown -R 1001:1001 ./data
+
+mkdir ./assets
+mkdir ./data
+mkdir ./config
+mkdir ./db
+mkdir ./redis

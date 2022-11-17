@@ -27,9 +27,9 @@ environments:
   - key: POSTGRES_DB
     value: "peertube"
   - key: PEERTUBE_DB_USERNAME
-    value: "peertube"
+    value: "postgres"
   - key: PEERTUBE_DB_PASSWORD
-    value: "peertube"
+    value: "random_password"
   - key: PEERTUBE_DB_SSL
     value: "false"
   - key: PEERTUBE_DB_HOSTNAME
@@ -46,7 +46,7 @@ environments:
     value: "false"
   - key: PEERTUBE_ADMIN_EMAIL
     value: "[EMAIL]"
-    
+
 config:
   runTime: "dockerCompose"
   version: ""

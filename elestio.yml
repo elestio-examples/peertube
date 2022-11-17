@@ -46,6 +46,8 @@ environments:
     value: "false"
   - key: PEERTUBE_ADMIN_EMAIL
     value: "[EMAIL]"
+  - key: PT_INITIAL_ROOT_PASSWORD
+    value: "random_password"
 
 config:
   runTime: "dockerCompose"

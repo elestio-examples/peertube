@@ -4,8 +4,14 @@
 
 Deploy PeerTube Agent with CI/CD on Elestio
 
-<img src="Peertube.png" style='width: 100%;'/>
+<img src="Peertube.png" style='width: 100%;, max-width:300px;'/>
 <br/>
 <br/>
 
 # When deploying ...
+
+You can can open Peertube UI here:
+
+    URL: https://[CI_CD_DOMAIN]
+    Login: root
+    password: [ADMIN_PASSWORD]

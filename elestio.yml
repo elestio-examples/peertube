@@ -48,6 +48,8 @@ environments:
     value: "[EMAIL]"
   - key: PT_INITIAL_ROOT_PASSWORD
     value: "random_password"
+  - key: ADMIN_PASSWORD
+    value: "random_password"
 
 config:
   runTime: "dockerCompose"

@@ -50,6 +50,8 @@ environments:
     value: "random_password"
   - key: ADMIN_PASSWORD
     value: "random_password"
+  - key: PEERTUBE_SECRET
+    value: "random_password"
 
 config:
   runTime: "dockerCompose"
@@ -67,6 +69,7 @@ lifeCycleConfig:
   postBackupCommand: "./scripts/postBackup.sh"
   preRestoreCommand: "./scripts/preRestore.sh"
   postRestoreCommand: "./scripts/postRestore.sh"
+  postUpdateCommand: "./scripts/postUpdateCommand.sh"
 webUI:
   - url: "https://[CI_CD_DOMAIN]"
     label: "Peertube Admin"

@@ -1,1 +1,1 @@
-docker-compose exec -u peertube peertube node dist/scripts/migrations/peertube-5.0.js
+docker-compose exec -T -u peertube peertube node dist/scripts/migrations/peertube-5.0.js

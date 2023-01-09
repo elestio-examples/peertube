@@ -7,14 +7,6 @@ ports:
     public: true
     path: "/"
     isAuth: false
-  - protocol: "TCP"
-    targetProtocol: "TCP"
-    listeningPort: "1935"
-    targetPort: "11935"
-    targetIP: "172.17.0.1"
-    public: true
-    path: "/"
-    isAuth: false
 environments:
   - key: SOFTWARE_VERSION_TAG
     value: "latest"

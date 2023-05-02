@@ -2,7 +2,7 @@ version: "3.3"
 services:
 
   peertube:
-    image: chocobozzz/peertube:production-bullseye
+    image: chocobozzz/peertube:${SOFTWARE_VERSION_TAG}
     env_file:
       - .env
     ports:

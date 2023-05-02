@@ -4,8 +4,8 @@
 #mkdir ./data
 #chown -R 1001:1001 ./data
 
-mkdir ./assets
-mkdir ./data
-mkdir ./config
-mkdir ./db
-mkdir ./redis
+mkdir -p ./assets
+mkdir -p ./data
+mkdir -p ./config
+mkdir -p ./db
+mkdir -p ./redis

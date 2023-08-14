@@ -1,15 +1,11 @@
-version: "3.3"
-
 services:
+
   peertube:
-    image: elestio4test/peertube:${SOFTWARE_VERSION_TAG}
-    networks:
-      default:
-        ipv4_address: 172.18.0.42
+    image: elestio4test/peertube:latest
     env_file:
       - .env
     ports:
-      - "9000:9000"
+     - "172.17.0.1:9000:9000"
     volumes:
       - assets:/app/client/dist
       - ./docker-volume/data:/data
@@ -17,7 +13,6 @@ services:
     depends_on:
       - postgres
       - redis
-      - postfix
     restart: "always"
 
   postgres:
@@ -34,20 +29,8 @@ services:
       - ./docker-volume/redis:/data
     restart: "always"
 
-  postfix:
-    image: mwader/postfix-relay
-    env_file:
-      - .env
-    volumes:
-      - ./docker-volume/opendkim/keys:/etc/opendkim/keys
-    restart: "always"
-
 networks:
   default:
-    ipam:
-      driver: default
-      config:
-        - subnet: 172.18.0.0/16
 
 volumes:
   assets:

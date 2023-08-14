@@ -10,7 +10,7 @@
 
 [Peertube](https://joinpeertube.org/) PeerTube is a tool for sharing online videos developed by Framasoft, a french non-profit.
 
-<img src="https://raw.githubusercontent.com/elestio-examples/peertube/main/peertube.png" alt="peertube" width="800">
+<img src="https://github.com/elestio-examples/peertube/raw/main/Peertube.png" alt="peertube" width="800">
 
 [![deploy](https://github.com/elestio-examples/peertube/raw/main/deploy-on-elestio.png)](https://dash.elest.io/deploy?source=cicd&social=dockerCompose&url=https://github.com/elestio-examples/peertube)
 

@@ -1,5 +1,6 @@
 cp -rf support/docker/production/* ./
 rm -f docker-compose.yml
 mv docker-compose-new.yml docker-compose.yml
+mv Dockerfile.bullseye Dockerfile
 
-docker buildx build . -f Dockerfile.bullseye --output type=docker,name=elestio4test/peertube:latest | docker load
+docker buildx build . --output type=docker,name=elestio4test/peertube:latest | docker load

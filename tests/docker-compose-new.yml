@@ -7,30 +7,24 @@ services:
     ports:
      - "172.17.0.1:9000:9000"
     volumes:
-      - assets:/app/client/dist
-      - ./docker-volume/data:/data
-      - ./docker-volume/config:/config
+      - ./assets:/app/client/dist
+      - ./data-volume/data:/data
+      - ./data-volume/config:/config
     depends_on:
       - postgres
       - redis
     restart: "always"
 
   postgres:
-    image: postgres:13-alpine
+    image: elestio/postgres:15
     env_file:
       - .env
     volumes:
-      - ./docker-volume/db:/var/lib/postgresql/data
+      - ./data-volume/db:/var/lib/postgresql/data
     restart: "always"
 
   redis:
-    image: redis:6-alpine
+    image: elestio/redis:6.0
     volumes:
-      - ./docker-volume/redis:/data
+      - ./data-volume/redis:/data
     restart: "always"
-
-networks:
-  default:
-
-volumes:
-  assets:

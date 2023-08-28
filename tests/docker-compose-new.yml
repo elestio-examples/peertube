@@ -1,13 +1,14 @@
 services:
 
   peertube:
-    image: elestio4test/peertube:latest
+    image: elestio4test/peertube:${SOFTWARE_VERSION_TAG}
     env_file:
       - .env
     ports:
-     - "172.17.0.1:9000:9000"
+    # - "1935:1935" # Comment if you don't want to use the live feature
+      - "172.17.0.1:9530:9000"
     volumes:
-      - ./assets:/app/client/dist
+    # - ./assets:/app/client/dist
       - ./data-volume/data:/data
       - ./data-volume/config:/config
     depends_on:

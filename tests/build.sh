@@ -1,5 +1,4 @@
-rm -rf config/*
-rmdir config
+
 cp -rf support/docker/production/* ./
 rm -f docker-compose.yml
 mv docker-compose-new.yml docker-compose.yml
